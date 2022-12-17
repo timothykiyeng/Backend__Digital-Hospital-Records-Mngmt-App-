@@ -15,4 +15,10 @@ class AppointmentsController < ApplicationController
     head :no_content
   end
 
+  private
+
+  def appointment_params
+    params.permit(:id, :title, :start_date, :end_date, :notes, :patient_id, :doctor_id)
+  end
+
 end
