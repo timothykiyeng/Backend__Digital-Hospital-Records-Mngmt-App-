@@ -9,6 +9,10 @@ class AppointmentsController < ApplicationController
     render json: appointment, status: :ok
   end
 
+  def create
+    render json: Appointment.create!(appointment_params), status: :created
+  end
+
   def destroy
     appointment = Appointment.find(params[:id])
     appointment.destroy
