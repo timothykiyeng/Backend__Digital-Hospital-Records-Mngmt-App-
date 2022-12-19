@@ -12,7 +12,7 @@ class DoctorsController < ApplicationController
 
     private
     def find_doctor
-       doctor.find(params[:id])
+       Doctor.find(params[:id])
     end
 
     def render_not_found_message
